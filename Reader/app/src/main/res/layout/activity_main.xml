@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demo.tyx.com.reader.activity.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#01030b"
+            android:minHeight="?attr/actionBarSize"
+
+            app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="主页"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBar"
+        app:theme="@style/AppTheme.DrawerArrowToggle">
+
+        <FrameLayout
+            android:id="@+id/content_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <!--<com.github.jdsjlzx.recyclerview.LRecyclerView-->
+                <!--android:id="@+id/slidMenu"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center"-->
+                <!--/>-->
+            
+            
+            <FrameLayout
+                android:id="@+id/menu_fl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
